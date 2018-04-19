@@ -47,9 +47,25 @@ public class Exaprac2 {
                          for (int i = 0; i < numero; i++) {
                              double TOTAL=cantidad[i]+total[i];
                              double iva =(TOTAL*0.13)+TOTAL;
+                             double descuento=0;
+                             double descuento1=0;
+                             if(iva>200){
+                                 descuento=(iva*0.20)+iva;
+                             
+                             }else
+                                 if(iva>500)
+                                 {
+                                 descuento=(iva*0.22)+iva;
+                                 
+                                 }
+                                 else if(iva>800){
+                                     
+                                 descuento1=(iva*0.30)+iva;
+                                
+                                         }
                           
                              JOptionPane.showMessageDialog(null,"compras #:"+(i+1)+
-                                     "\nnombre:"+nombre[i]+"\ncantidad"+cantidad[i]+"\nprecio:"+total[i]+"\ntotal"+iva,"DATOS",1);
+                                     "\nnombre:"+nombre[i]+"\ncantidad"+cantidad[i]+"\nprecio:"+total[i]+"\ntotal"+iva+"\ndescuento"+descuento1,"DATOS",1);
                         
                     }
                     
